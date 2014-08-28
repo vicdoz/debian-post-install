@@ -32,3 +32,6 @@ deb-src http://security.debian.org/ testing/updates main contrib non-free
 deb http://www.debian-multimedia.org/ testing main 
 #deb http://www.debian-multimedia.org/ sid main 
 #deb http://www.debian-multimedia.org/ experimental main
+
+#Chrome
+deb http://dl.google.com/linux/deb/ stable main
