@@ -1,11 +1,13 @@
-##STABLE
+###STABLE
 
- deb http://ftp.fi.debian.org/debian/ stable main contrib non-free 
+deb http://ftp.fi.debian.org/debian/ stable main contrib non-free 
 deb-src http://ftp.fi.debian.org/debian/ stable main contrib non-free 
 
 deb http://security.debian.org/ stable/updates main contrib non-free 
 deb-src http://security.debian.org/ stable/updates main contrib non-free 
 
+###BACKPORTS
+deb http://http.debian.net/debian/ wheezy-backports main contrib non-free
 
 
 ###TESTING
@@ -29,16 +31,16 @@ deb-src http://security.debian.org/ testing/updates main contrib non-free
 
 
 ## DEBIAN MULTIMEDIA
-deb http://www.debian-multimedia.org/ testing main 
+#deb http://www.debian-multimedia.org/ wheezy main non-free
 #deb http://www.debian-multimedia.org/ sid main 
 #deb http://www.debian-multimedia.org/ experimental main
 
-#Chrome
+####CHROME
 deb http://dl.google.com/linux/deb/ stable main
-#Dropbox
-deb http://linux.dropbox.com debian wheezy main 
-deb-src http://linux.dropbox.com debian wheezy main
-#Spotify
-deb http://repository.spotify.com stable non-free 
-# Repositorio VirtualBox Debian Wheezy  
-deb http://download.virtualbox.org/virtualbox/debian wheezy contrib non-free 
+ 
+###VIRTUALBOX
+deb http://download.virtualbox.org/virtualbox/debian squeeze contrib
+
+###JAVA
+deb http://ppa.launchpad.net/webupd8team/java/ubuntu precise main
+deb-src http://ppa.launchpad.net/webupd8team/java/ubuntu precise main
