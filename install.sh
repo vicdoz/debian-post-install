@@ -6,10 +6,10 @@
 eval $(parse_yaml config.yml "config_")
 
 
-wget sources.list
+wget https://raw.githubusercontent.com/vicdoz/debian-post-install/master/sources.list
 cp /etc/apt/sources.list /etc/apt/sources.list.bak
 cp sources.list /etc/apt/
-wget preferences
+wget https://raw.githubusercontent.com/vicdoz/debian-post-install/master/preferences
 cp preferences /etc/apt/
 aptitude update
 aptitude install linux-headers-`uname -r`
