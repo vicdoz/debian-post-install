@@ -30,8 +30,8 @@ wget -q http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc -O- | s
 apt-key adv --keyserver pgp.mit.edu --recv-keys 5044912E
 apt-get install dkms virtualbox-4.2
 echo "
-$config_git_username ALL=(ALL) ALL " >> /etc/sudoers
-gpasswd -a  $config_git_username sudo
+https://raw.githubusercontent.com/vicdoz/debian-post-install/master/sources.list ALL=(ALL) ALL " >> /etc/sudoers
+gpasswd -a nombre_usuario sudo
 aptitude install gdebi
 aptitude install vlc
 aptitude install flashplugin-nonfree
@@ -44,26 +44,10 @@ aptitude install oracle-java7-installer
 http://download.jetbrains.com/webide/PhpStorm-7.1.4.tar.gz
 tar xfz PhpStorm-*.tar.gz
 mv PhpStorm* /var/opt
-aptitude install terminator
-aptitude install htop
-#Preload user process 
+
 aptitude install preload
 aptitude install nautilus-gtkhash nautilus-open-terminal
 aptitude install lm-sensors hddtemp
 sensors-detect
 aptitude install nautilus-dropbox
-#ADMINER
-wget http://downloads.sourceforge.net/adminer/adminer-4.1.0.php
-##ANDROID DEVELOPMENT
-wget https://dl.google.com/android/adt/adt-bundle-linux-x86_64-20140702.zip
-unzip  adt-bundle-linux-x86_64-20140702.zip 
-rm -rf adt-bundle-linux-x86_64-20140702.zip 
-mkdir /home/vicdoz/android
-mv adt-bundle-linux-x86_64-20140702 /home/vicdoz/android
-
-#GENYMOTION
-wget http://files2.genymotion.com/genymotion/genymotion-2.2.2/genymotion-2.2.2_x64_debian.bin
-chmod +x genymotion-2.2.2_x64_debian.bin
-mv genymotion-2.2.2_x64_debian.bin /home/vicdoz/android 
-./genymotion-2.2.2_x64_debian.bin
 
